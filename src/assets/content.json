@@ -7,10 +7,10 @@
             "businessCardFront": "",
             "businessCardBack": "",
             "caption": [
-                "This is a collection of some business card and logo designs I've made.\n\r",
-                "Click on a logo to expand section.\n\r",
-                "\n",
-                "Hover over business card to display back of card.\n\r",
+                "This is a collection of some business card and logo designs I've made.",
+                "Click on a logo to expand a section.",
+                "Hover over a business card to display the other side of the card.",
+                "",
                 "Cheers!"
             ]
         },

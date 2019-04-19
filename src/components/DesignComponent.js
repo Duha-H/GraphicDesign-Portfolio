@@ -15,12 +15,14 @@ class DesignComponent extends Component
         this.expandable = this.props.expandable;
 
         this.expandContent = this.expandContent.bind(this);
+        this.flipCardFront = this.flipCardFront.bind(this);
+        this.flipCardBack = this.flipCardBack.bind(this);
 
         this.state = {
             logo: "",
             card: "",
             expanded: false,
-            text: ""
+            text: []
         }
     }
 
@@ -31,10 +33,12 @@ class DesignComponent extends Component
             this.cardBack = require(`../assets/cards/${this.props.info.businessCardBack}`);
             this.cardFront = require(`../assets/cards/${this.props.info.businessCardFront}`);
             this.setState({
-                logo: require(`../assets/logos/${this.props.info.logo}`),
-                card: require(`../assets/cards/${this.props.info.businessCardBack}`)
+                logo: this.logo,
+                card: this.cardBack
             });
         } else {
+            var caption = this.props.info.caption.join("\n");
+            console.log(caption);
             this.setState({text: this.props.info.caption});
         }
     }
@@ -45,23 +49,40 @@ class DesignComponent extends Component
             {expanded: !state.expanded}
         ));
     }
+
+    flipCardFront() {
+        this.setState({
+            card: this.cardFront
+        });
+    }
+
+    flipCardBack() {
+        this.setState({
+            card: this.cardBack
+        });
+    }
     
 
     render() {
         
         return (
-            <div className={
-                this.state.expanded ? "DesignExpanded" : "DesignComponent"
-            }>
+            <div className="DesignComponent">
                 <div className="DesignStatic">
                     <h4 id="design-title">{this.props.info.title}</h4>
+                    <div id="design-text">
+                        {this.state.text.map((sentence) => {
+                            return <p>{sentence}<br/></p>;
+                        }) }
+                    </div>
                     <img id="design-logo" src={this.state.logo} alt="" onClick={this.expandContent}/>
-                    <p id="design-text">{this.state.text}</p>
                 </div>          
                 <div>
                     {this.state.expanded && <div className="DesignExpanded">
-                        <p>{this.props.info.caption}</p>
-                        <img id="design-card" src={this.state.card} alt="card missing"/>
+                        <img id="design-card" src={this.state.card} alt="card missing" 
+                            onMouseOver={this.flipCardFront} onMouseOut={this.flipCardBack}
+                            onTouchStart={this.flipCardFront} onTouchEnd={this.flipCardBack}
+                        />
+                        <p id="design-caption">{this.props.info.caption}</p>
                     </div>}
                 </div>
             </div>

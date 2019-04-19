@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Muli|Questrial|Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Nunito|Montserrat|Muli|Quicksand|Questrial|Titillium+Web');
 
 body {
   background-color: #1c1d20;
@@ -17,72 +17,78 @@ p {
   align-content: center;
   justify-content: center;
   overflow: hidden;
+  overflow-y: hidden;
 }
 
 .MainComponent {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
+  overflow-y: none;
   margin-top: 4%;
+  margin-bottom: 4%;
   margin-right: 10%;
   margin-left: 10%;
   margin-bottom: auto;
   align-content: center;
-  height: 75%;
+  height: 72vh;
 }
 
 .DesignComponent {
   margin: 10px;
   padding: auto;
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  flex-direction: row;
   background-color: rgb(125, 125, 128, 0.08);
-  min-width: 280px;
-  min-height: 520px;
+  max-width: 880px;
+  height: 68vh;
   vertical-align: middle;
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow-y: none;
 }
 
 .DesignComponent:hover {
-  background-color: rgb(125, 125, 128, 0.7);
+  background-color: rgb(125, 125, 128, 0.5);
 }
 
 .DesignStatic {
-  grid-area: "DesignStatic";
-  padding: 5px;
-  display: flex;
+  width: 280px;
+  min-height: 100%;
+  display: flexbox;
   flex-direction: column;
-  vertical-align: middle;
   align-items: center;
   justify-content: center;
+  position: relative;
+  padding-top: 0px;
+  overflow-y: none;
 }
 
 .DesignExpanded {
-  grid-area: "DesignExpanded";
-  margin: 50px;
-  min-width: 500px;
+  margin: 5px;
+  width: 500px;
+  max-height: 520px;
   padding: auto;
   display: flex;
   flex-direction: column;
-  background-color: rgb(125, 125, 128, 0.08);
   min-height: 520px;
   vertical-align: middle;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: inherit;
+  overflow-y: none;
 }
 
 #main-header {
   position: sticky;
-  height: 25%;
+  max-height: 15vh;
   position: -webkit-sticky;
 }
 
 #header-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 270%;
+  font-family: 'Nunito', sans-serif;
+  font-size: 30pt;
   padding-bottom: 0px;
   padding-top: 15px;
   margin-bottom: 0.5px;
@@ -90,32 +96,43 @@ p {
 
 #header-subtitle {
   font-family: 'Questrial', sans-serif;
-  font-size: 12pt;
+  font-size: 11pt;
+  justify-content: baseline;
 }
 
 #design-title {
-  font-family: 'Questrial', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 14pt;
-  margin-top: 0px;
-  padding-top: 0px;
   vertical-align: top;
-  position: absolute;
-  top: 5%;
+  align-self: top;
+  position: relative;
+  text-align: left;
+  margin-left: 30px;
 }
 
 #design-logo {
-  display: inline-block;
   vertical-align: middle;
-  position: absolute;
   padding-bottom: auto;
   max-width: 200px;
   max-height: 200px;
   align-self: center;
+  vertical-align: center;
+  padding-top: 10vh;
 }
 
 #design-text {
-  margin: 20px;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-top: 15px;
   text-align: left;
+  padding-top: 5vh;
+}
+
+#design-caption {
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-top: 15px;
+  text-align: center;
 }
 
 #design-card {

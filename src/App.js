@@ -15,18 +15,6 @@ class App extends Component
 	}
 
 
-	componentDidMount() {
-		
-		const retrievedData = jsonData.data;
-		
-		console.log(this.state.data);
-		for(var i = 0; i < this.state.data.length; i++) {
-			var obj = this.state.data[i];
-			//console.log("thing " + obj.title);
-		}
-	}
-
-
 	render() {
 		return (
 			<div className="App">
