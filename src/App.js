@@ -1,32 +1,47 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { HashRouter, Route, Link, Switch } from 'react-router-dom';
+import { HashRouter} from 'react-router-dom';
+import jsonData from './assets/content.json';
+import MainComponent from './components/MainComponent';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+class App extends Component 
+{
+
+	constructor() {
+		super();
+		this.state = {
+			data: jsonData.data
+		};
+	}
+
+
+	componentDidMount() {
+		
+		const retrievedData = jsonData.data;
+		
+		console.log(this.state.data);
+		for(var i = 0; i < this.state.data.length; i++) {
+			var obj = this.state.data[i];
+			//console.log("thing " + obj.title);
+		}
+	}
+
+
+	render() {
+		return (
+			<div className="App">
+				<header id="main-header">
+					<h1 id="header-title">Duha Hassan</h1>
+					<h3 id="header-subtitle">BUSINESS CARD & LOGO DESIGNS</h3>
+				</header>
+				<div className="content">
+					<MainComponent data={this.state.data}/>
+				</div>
+			</div>
+		);
+	}
 }
 
-//export default App;
 
 export default () => (
     <HashRouter>
