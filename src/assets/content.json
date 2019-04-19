@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "title": "Cookie Town",
+            "logo": "CT_LOGO.png",
+            "businessCardFront": "CT_BC_FRONT.jpg",
+            "businessCardBack": "CT_BC_BACK.jpg",
+            "caption": "Designed for a small, cookie-selling business."
+        },
+        {
+            "id": "2",
+            "title": "Maria Alejos",
+            "logo": "MA_LOGO.png",
+            "businessCardFront": "MA_BC_FRONT.jpg",
+            "businessCardBack": "MA_BC_BACK.jpg",
+            "caption": "Designed for a custom doll-making artist."
+        },
+        {
+            "id": "3",
+            "title": "Talabat Sukkar",
+            "logo": "TS_LOGO.png",
+            "businessCardFront": "TS_BC_FRONT.jpg",
+            "businessCardBack": "TS_BC_BACK.jpg",
+            "caption": "Designed for a small, home-made pastries business. Business name, Talabat Sukkar, is arabic for 'Sugar Orders'; a play on words for Sweet Orders"
+        },
+        {
+            "id": "4",
+            "title": "Silly Stitch",
+            "logo": "SS_LOGO.png",
+            "businessCardFront": "SS_BC_FRONT.jpg",
+            "businessCardBack": "SS_BC_BACK.jpg",
+            "caption": "Designed for a custom-knitting artist and business."
+        },
+        {
+            "id": "5",
+            "title": "Duha Hassan",
+            "logo": "DH_LOGO.png",
+            "businessCardFront": "DH_BC_FRONT.jpg",
+            "businessCardBack": "DH_BC_BACK.jpg",
+            "caption": "Designed for myself a while back! No longer a 'Pending-Architect'! This symbolizes a design I look back at to measure my improvement."
+        },
+        {
+            "id": "6",
+            "title": "Mustafa Mohammed",
+            "logo": "MM_LOGO.png",
+            "businessCardFront": "MM_BC_FRONT.jpg",
+            "businessCardBack": "DH_BC_BACK.jpg",
+            "caption": "Professional business card and logo, designed for an individual."
+        }
+    ]
+}
