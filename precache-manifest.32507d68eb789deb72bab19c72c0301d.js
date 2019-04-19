@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/GraphicDesign-Portfolio/static/media/DH_BC_BACK.f2606fb5.jpg"
   },
   {
-    "revision": "1661706dff858f1a3252",
-    "url": "/GraphicDesign-Portfolio/static/css/main.1dd9f1c6.chunk.css"
+    "revision": "b279ffee3e06b33ef447",
+    "url": "/GraphicDesign-Portfolio/static/css/main.571c8aa9.chunk.css"
   },
   {
     "revision": "a8fca852c9fa8e722fa5",
     "url": "/GraphicDesign-Portfolio/static/js/runtime~main.5644d7e9.js"
   },
   {
-    "revision": "44968b3f5a351d34aa3a",
-    "url": "/GraphicDesign-Portfolio/static/js/2.caa1e8f5.chunk.js"
+    "revision": "830a209dc9a103c92c4f",
+    "url": "/GraphicDesign-Portfolio/static/js/2.1a0602ee.chunk.js"
   },
   {
     "revision": "728f16160986ea3c4dcaa48a4f3715c9",
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/GraphicDesign-Portfolio/static/media/MA_LOGO.255af010.png"
   },
   {
-    "revision": "0367a6ce789c6f8876e32374f42adc11",
-    "url": "/GraphicDesign-Portfolio/static/media/MM_LOGO.0367a6ce.png"
+    "revision": "ad5f8fadecfa707298e962bd9f45ea26",
+    "url": "/GraphicDesign-Portfolio/static/media/MM_LOGO.ad5f8fad.png"
   },
   {
-    "revision": "ff5bea6d04cdcc708e20826c4b0a2d4e",
-    "url": "/GraphicDesign-Portfolio/static/media/SS_LOGO.ff5bea6d.png"
+    "revision": "11b8ae847e389874fcdb72e75827ca5e",
+    "url": "/GraphicDesign-Portfolio/static/media/SS_LOGO.11b8ae84.png"
   },
   {
     "revision": "9648640c2503a289944f8ec6d6c9ef73",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/GraphicDesign-Portfolio/static/media/CT_BC_FRONT.41f13894.jpg"
   },
   {
-    "revision": "1661706dff858f1a3252",
-    "url": "/GraphicDesign-Portfolio/static/js/main.37143fca.chunk.js"
+    "revision": "b279ffee3e06b33ef447",
+    "url": "/GraphicDesign-Portfolio/static/js/main.1ddc75e2.chunk.js"
   },
   {
     "revision": "1c4f79dfa62a46344a0f286518545196",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/GraphicDesign-Portfolio/static/media/TS_BC_FRONT.0548fc61.jpg"
   },
   {
-    "revision": "5d2a8938b1daac9dbb1d0e42389cfa66",
+    "revision": "14451ac8d4f872b19c5a037e8c8b5ced",
     "url": "/GraphicDesign-Portfolio/index.html"
   }
 ];
