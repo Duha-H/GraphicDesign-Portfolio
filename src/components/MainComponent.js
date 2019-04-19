@@ -19,7 +19,10 @@ class MainComponent extends Component
         return (
             <div className="MainComponent">
                 {this.props.data.map((component) => {
-                    return <DesignComponent info={component} key={component.id}/>
+                    if(component.id === '0')
+                        return <DesignComponent info={component} key={component.id} expandable={false}/>
+                    else
+                        return <DesignComponent info={component} key={component.id} expandable={true}/>
                 })}
             </div>
         );
