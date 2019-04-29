@@ -6,89 +6,36 @@ body {
 
 p {
   font-size: 12pt;
+  margin: 0px;
 }
 
-.App {
+.app {
   text-align: center;
   background-color: #1c1d20;
   color: white;
-  width: 100%;
-  height: 100%;
   align-content: center;
   justify-content: center;
-  overflow: hidden;
-  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: inline;
+  z-index: auto;
 }
 
-.MainComponent {
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  overflow-y: none;
-  margin-top: 4%;
-  margin-bottom: 4%;
-  margin-right: 10%;
-  margin-left: 10%;
-  margin-bottom: auto;
-  align-content: center;
-  height: 72vh;
-}
+/* Header Content Styling */
 
-.DesignComponent {
-  margin: 10px;
-  padding: auto;
-  display: inline-flex;
-  flex-direction: row;
-  background-color: rgb(125, 125, 128, 0.08);
-  max-width: 880px;
-  height: 67vh;
-  vertical-align: middle;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow-y: none;
-}
-
-.DesignComponent:hover {
-  background-color: rgb(125, 125, 128, 0.5);
-}
-
-.DesignStatic {
-  width: 280px;
-  min-height: 100%;
-  display: flexbox;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  padding-top: 0px;
-  overflow-y: none;
-}
-
-.DesignExpanded {
-  margin: 5px;
-  width: 500px;
-  max-height: 520px;
-  padding: auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 520px;
-  vertical-align: middle;
-  align-items: center;
-  justify-content: center;
-  position: inherit;
-  overflow-y: none;
-}
-
-#main-header {
+.main-header {
+  background-color: #1c1d20;
+  z-index: 5;
   position: sticky;
-  max-height: 15vh;
   position: -webkit-sticky;
+  top: 0;
+  height: 10%;
+  padding-bottom: 5px;
 }
 
 #header-title {
   font-family: 'Nunito', sans-serif;
-  font-size: 30pt;
+  font-size: 25pt;
   padding-bottom: 0px;
   padding-top: 15px;
   margin-bottom: 0.5px;
@@ -100,10 +47,190 @@ p {
   justify-content: baseline;
 }
 
+/* Main Content Styling (sidebar + main component) */
+
+.content {
+  padding-top: 3%;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  max-height: 90%;
+  align-content: center;
+  margin: auto;
+  z-index: 1;
+}
+
+#info {
+  grid-area: info;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  position: relative;
+  min-width: 10%;
+  max-width: 10%;
+  min-height: 95%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Scroll Layout Styling */
+
+#scroll.main-component {
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: auto;
+  align-content: center;
+  min-height: 75vh;
+}
+
+#scroll.design-component {
+  margin: 10px;
+  padding: auto;
+  border-radius: 6px;
+  display: inline-flex;
+  flex-direction: row;
+  background-color: rgb(125, 125, 128, 0.08);
+  max-width: 880px;
+  min-height: 100%;
+  position: relative;
+  overflow-y: none;
+}
+
+#scroll.design-component:hover {
+  background-color: rgb(125, 125, 128, 0.5);
+}
+
+#scroll.design--static {
+  width: 280px;
+  border-radius: 6px;
+  display: flexbox;
+  flex-direction: column;
+  position: relative;
+  padding-top: 0px;
+  overflow-y: none;
+}
+
+#scroll.design--expanded {
+  width: 500px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  position: inherit;
+  overflow-y: none;
+}
+
+/* Grid Layout Styling */
+
+#grid.main-component {
+  grid-area: main;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-auto-rows: 300px;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+}
+
+#grid.design-component {
+  margin: 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(125, 125, 128, 0.08);
+  height: 280px;
+  width: 280px;
+  vertical-align: center;
+}
+
+#grid.design-component:hover {
+  background-color: rgb(125, 125, 128, 0.5);
+}
+
+#grid.design--static {
+  max-width: 280px;
+  min-height: 280px;
+  display: flexbox;
+  flex-direction: column;
+  overflow-y: none;
+  z-index: 1;
+}
+
+#grid.design--expanded {
+  min-width: 500px;
+  min-height: 280px;
+  border-radius: 6px;
+  padding: 8px;
+  position: relative;
+  top: 5%;
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(125, 125, 128, 1);
+  overflow-y: none;
+  z-index: 3;
+}
+
+/* Sidebar components styling (layout buttons + info bubble) */
+
+#layout-button {
+  width: 55px;
+  height: 55px;
+  border-radius: 65px;
+  margin: 3px;
+  background-color: rgb(125, 125, 128, 0.2);
+  color: white;
+  border: none;
+  position: sticky;
+  position: -webkit-sticky;
+}
+
+#layout-button:hover {
+  background-color: rgb(125, 125, 128, 0.5);
+}
+
+#layout-button #info-tooltip {
+  visibility: hidden;
+  opacity: 1;
+  padding: 8px;
+  top: 5px;
+  left: 150%;
+  min-width: 430px;
+  position: absolute;
+  background-color: white;
+  color: #1c1d20;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+#layout-button:hover #info-tooltip {
+  visibility: visible;
+}
+
+/* Design components styling (logos + titles + business cards + captions) */
+
 #design-title {
   font-family: 'Quicksand', sans-serif;
   font-size: 14pt;
-  vertical-align: top;
   align-self: top;
   position: relative;
   text-align: left;
@@ -115,17 +242,11 @@ p {
   padding-bottom: auto;
   max-width: 200px;
   max-height: 200px;
-  align-self: center;
-  vertical-align: center;
-  padding-top: 10vh;
+  text-align: center;
 }
 
-#design-text {
-  margin-left: 30px;
-  margin-right: 20px;
-  margin-top: 15px;
-  text-align: left;
-  padding-top: 5vh;
+#scroll #design-logo {
+  padding-top: 30%;
 }
 
 #design-caption {

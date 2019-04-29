@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import logo1 from "../../src/assets/logos/CT_LOGO.png";
 
 
 class DesignComponent extends Component 
@@ -28,7 +27,6 @@ class DesignComponent extends Component
 
     componentDidMount() {
         if(this.props.expandable) {
-            console.log("Expandable" + this.props.info.id);
             this.logo = require(`../assets/logos/${this.props.info.logo}`);
             this.cardBack = require(`../assets/cards/${this.props.info.businessCardBack}`);
             this.cardFront = require(`../assets/cards/${this.props.info.businessCardFront}`);
@@ -37,14 +35,11 @@ class DesignComponent extends Component
                 card: this.cardBack
             });
         } else {
-            var caption = this.props.info.caption.join("\n");
-            console.log(caption);
             this.setState({text: this.props.info.caption});
         }
     }
 
     expandContent() {
-        console.log("EXPANDING!");
         this.setState((state) => (
             {expanded: !state.expanded}
         ));
@@ -66,18 +61,13 @@ class DesignComponent extends Component
     render() {
         
         return (
-            <div className="DesignComponent">
-                <div className="DesignStatic">
+            <div class="design-component" id={this.props.id}>
+                <div class="design--static" id={this.props.id}>
                     <h4 id="design-title">{this.props.info.title}</h4>
-                    <div id="design-text">
-                        {this.state.text.map((sentence) => {
-                            return <p>{sentence}<br/></p>;
-                        }) }
-                    </div>
                     <img id="design-logo" src={this.state.logo} alt="" onClick={this.expandContent}/>
                 </div>          
                 <div>
-                    {this.state.expanded && <div className="DesignExpanded">
+                    {this.state.expanded && <div class="design--expanded" id={this.props.id}>
                         <img id="design-card" src={this.state.card} alt="card missing" 
                             onMouseOver={this.flipCardFront} onMouseOut={this.flipCardBack}
                             onTouchStart={this.flipCardFront} onTouchEnd={this.flipCardBack}

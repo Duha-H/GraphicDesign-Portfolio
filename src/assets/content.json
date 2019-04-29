@@ -1,20 +1,6 @@
 {
     "data": [
         {
-            "id": "0",
-            "title": "Hi!",
-            "logo": "",
-            "businessCardFront": "",
-            "businessCardBack": "",
-            "caption": [
-                "This is a collection of some business card and logo designs I've made.",
-                "Click on a logo to expand a section.",
-                "Hover over a business card to display the other side of the card.",
-                "",
-                "Cheers!"
-            ]
-        },
-        {
             "id": "1",
             "title": "Cookie Town",
             "logo": "CT_LOGO.png",
