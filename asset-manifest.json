@@ -1,15 +1,15 @@
 {
-  "main.css": "/GraphicDesign-Portfolio/static/css/main.571c8aa9.chunk.css",
-  "main.js": "/GraphicDesign-Portfolio/static/js/main.1ddc75e2.chunk.js",
-  "main.js.map": "/GraphicDesign-Portfolio/static/js/main.1ddc75e2.chunk.js.map",
+  "main.css": "/GraphicDesign-Portfolio/static/css/main.0bdec803.chunk.css",
+  "main.js": "/GraphicDesign-Portfolio/static/js/main.21d238dc.chunk.js",
+  "main.js.map": "/GraphicDesign-Portfolio/static/js/main.21d238dc.chunk.js.map",
   "runtime~main.js": "/GraphicDesign-Portfolio/static/js/runtime~main.5644d7e9.js",
   "runtime~main.js.map": "/GraphicDesign-Portfolio/static/js/runtime~main.5644d7e9.js.map",
-  "static/js/2.1a0602ee.chunk.js": "/GraphicDesign-Portfolio/static/js/2.1a0602ee.chunk.js",
-  "static/js/2.1a0602ee.chunk.js.map": "/GraphicDesign-Portfolio/static/js/2.1a0602ee.chunk.js.map",
+  "static/js/2.d191d367.chunk.js": "/GraphicDesign-Portfolio/static/js/2.d191d367.chunk.js",
+  "static/js/2.d191d367.chunk.js.map": "/GraphicDesign-Portfolio/static/js/2.d191d367.chunk.js.map",
   "index.html": "/GraphicDesign-Portfolio/index.html",
-  "precache-manifest.32507d68eb789deb72bab19c72c0301d.js": "/GraphicDesign-Portfolio/precache-manifest.32507d68eb789deb72bab19c72c0301d.js",
+  "precache-manifest.cc73405c687d0352985e15c0b1080a11.js": "/GraphicDesign-Portfolio/precache-manifest.cc73405c687d0352985e15c0b1080a11.js",
   "service-worker.js": "/GraphicDesign-Portfolio/service-worker.js",
-  "static/css/main.571c8aa9.chunk.css.map": "/GraphicDesign-Portfolio/static/css/main.571c8aa9.chunk.css.map",
+  "static/css/main.0bdec803.chunk.css.map": "/GraphicDesign-Portfolio/static/css/main.0bdec803.chunk.css.map",
   "static/media/CT_BC_BACK.jpg": "/GraphicDesign-Portfolio/static/media/CT_BC_BACK.853bfc79.jpg",
   "static/media/CT_BC_FRONT.jpg": "/GraphicDesign-Portfolio/static/media/CT_BC_FRONT.41f13894.jpg",
   "static/media/CT_LOGO.png": "/GraphicDesign-Portfolio/static/media/CT_LOGO.728f1616.png",
@@ -26,5 +26,8 @@
   "static/media/SS_LOGO.png": "/GraphicDesign-Portfolio/static/media/SS_LOGO.11b8ae84.png",
   "static/media/TS_BC_BACK.jpg": "/GraphicDesign-Portfolio/static/media/TS_BC_BACK.43ef611d.jpg",
   "static/media/TS_BC_FRONT.jpg": "/GraphicDesign-Portfolio/static/media/TS_BC_FRONT.0548fc61.jpg",
-  "static/media/TS_LOGO.png": "/GraphicDesign-Portfolio/static/media/TS_LOGO.9648640c.png"
+  "static/media/TS_LOGO.png": "/GraphicDesign-Portfolio/static/media/TS_LOGO.9648640c.png",
+  "static/media/grid_icon_w.svg": "/GraphicDesign-Portfolio/static/media/grid_icon_w.bae42341.svg",
+  "static/media/info_icon_w.svg": "/GraphicDesign-Portfolio/static/media/info_icon_w.4fd88001.svg",
+  "static/media/scroll_icon_w.svg": "/GraphicDesign-Portfolio/static/media/scroll_icon_w.e9b64826.svg"
 }
