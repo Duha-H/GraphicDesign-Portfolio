@@ -41,15 +41,15 @@ class App extends Component
 				</header>
 				<div className="content">
 					<div id="sidebar">
-						{/* <div id="layout-button">
+						<div className="spacer"></div>
+						<div id="layout-button">
 							<img src={require(`./assets/icons/info_icon_w.svg`)} alt="unavailable"/>
 							<span id="info-tooltip">
 								This is a collection of some business card and logo designs I've made.<br />
 								Click on a logo to expand or collapse a section.<br />
 								Hover over a business card to display the other side of the card.
 							</span>
-						</div> */}
-						<div className="spacer"></div>
+						</div>
 						<button id="layout-button" onClick={this.handleScrollLayout}>
 							<img src={require(`./assets/icons/scroll_icon_w.svg`)} alt="unavailable"/>
 						</button>

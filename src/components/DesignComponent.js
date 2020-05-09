@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ExpandedDesignComponent from './ExpandedDesignComponent';
 
 
 class DesignComponent extends Component 
@@ -14,14 +15,13 @@ class DesignComponent extends Component
         this.expandable = this.props.expandable;
 
         this.expandContent = this.expandContent.bind(this);
-        this.flipCardFront = this.flipCardFront.bind(this);
-        this.flipCardBack = this.flipCardBack.bind(this);
 
         this.state = {
             logo: "",
-            card: "",
+            cardBack: "",
+            cardFront: "",
             expanded: false,
-            text: []
+            text: ""
         }
     }
 
@@ -32,7 +32,10 @@ class DesignComponent extends Component
             this.cardFront = require(`../assets/cards/${this.props.info.businessCardFront}`);
             this.setState({
                 logo: this.logo,
-                card: this.cardBack
+                card: this.cardBack,
+                cardBack: this.cardBack,
+                cardFront: this.cardFront,
+                text: this.props.info.caption
             });
         } else {
             this.setState({text: this.props.info.caption});
@@ -45,17 +48,6 @@ class DesignComponent extends Component
         ));
     }
 
-    flipCardFront() {
-        this.setState({
-            card: this.cardFront
-        });
-    }
-
-    flipCardBack() {
-        this.setState({
-            card: this.cardBack
-        });
-    }
     
 
     render() {
@@ -67,13 +59,7 @@ class DesignComponent extends Component
                     <img id="design-logo" src={this.state.logo} alt="" onClick={this.expandContent}/>
                 </div>          
                 <div>
-                    {this.state.expanded && <div class="design--expanded" id={this.props.id}>
-                        <img id="design-card" src={this.state.card} alt="card missing" 
-                            onMouseOver={this.flipCardFront} onMouseOut={this.flipCardBack}
-                            onTouchStart={this.flipCardFront} onTouchEnd={this.flipCardBack}
-                        />
-                        <p id="design-caption">{this.props.info.caption}</p>
-                    </div>}
+                    {this.state.expanded && <ExpandedDesignComponent data={this.state} info={this.props.info} expandHandler={this.expandContent} />}
                 </div>
             </div>
         );

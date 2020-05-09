@@ -8,8 +8,8 @@ class MainComponent extends Component
     render() {
         return (
             <Scrollbars 
-                style={{ height: 780, marginTop: 40 }}
-                renderScrollbarHorizontal={props => <div {...props} className="scrollbar-vertical"/>}
+                style={{ height: 690, marginTop: 40 }}
+                renderScrollbarHorizontal={(props, style) => <div style={{...style, backgroundColor: 'blue'}} {...props} className="scrollbar-vertical" />}
                 autoHide
             >
                 <div className="main-component" id={this.props.layout}>

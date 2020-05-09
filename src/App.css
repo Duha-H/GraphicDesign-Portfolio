@@ -20,8 +20,19 @@ p {
   display: flex;
   flex-direction: column;
   max-width: 1200px;
+  max-height: 970px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.scrollbar-vertical {
+  background-color: aliceblue;
+  color: aliceblue;
+  margin-bottom: 30px;
+}
+
+Scrollbars {
+  margin-bottom: 30px;
 }
 
 /* Header Content Styling */
@@ -56,7 +67,7 @@ p {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  max-height: 90%;
+  max-height: 100%;
   align-content: center;
   z-index: 1;
   text-align: center;
@@ -121,19 +132,47 @@ p {
   overflow-y: none;
 }
 
-#scroll.design--expanded {
-  width: 500px;
-  margin-top: auto;
-  margin-bottom: auto;
-  padding: auto;
+.expanded-content {
+  width: 600px;
+  height: 800px;
+  background-color: rgba(54, 55, 58, 0.932);
+  border-radius: 15px;
+  z-index: 3;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: scaleUp duration timing-function delay iteration-count direction fill-mode;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-  vertical-align: middle;
-  align-items: center;
-  justify-content: center;
-  position: inherit;
-  overflow-y: none;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 17px rgba(black, 0.35);
+  animation: scaleup 0.2s alternate 0s ease-in;
+}
+
+#expanded-logo {
+  padding: 0;
+  width: 150px;
+  margin: 20px auto;
+  margin-top: 0;
+}
+
+.close-button {
+  text-align: right;
+}
+
+.close-button button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@keyframes scaleup {
+  0%   {transform: scale(0) translate(-50%, -50%);}
+  100% {transform: scale(1) translate(-50%, -50%);}
 }
 
 /* Grid Layout Styling */
@@ -227,18 +266,23 @@ p {
   background-color: rgb(125, 125, 128, 0.5);
 }
 
+div#layout-button {
+  padding: auto;
+}
+
 #layout-button #info-tooltip {
   visibility: hidden;
   opacity: 1;
   padding: 8px;
-  top: 5px;
-  left: 150%;
-  min-width: 430px;
-  position: absolute;
+  bottom: 135px;
+  right: 170px;
+  min-width: 330px;
+  position: relative;
   background-color: white;
   color: #1c1d20;
   border-radius: 6px;
   z-index: 10;
+  display: inline-block;
 }
 
 #layout-button:hover #info-tooltip {
@@ -264,6 +308,10 @@ p {
   text-align: center;
 }
 
+#design-logo:hover {
+  cursor: pointer;
+}
+
 #scroll #design-logo {
   padding-top: 30%;
 }
@@ -276,8 +324,10 @@ p {
 }
 
 #design-card {
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 500px;
+  max-height: 500px;
+  min-width: 300px;
+  margin: 20px auto;
 }
 
 /* Screen Responsiveness */
