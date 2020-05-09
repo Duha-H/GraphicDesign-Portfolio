@@ -61,8 +61,8 @@ class DesignComponent extends Component
     render() {
         
         return (
-            <div class="design-component" id={this.props.id}>
-                <div class="design--static" id={this.props.id}>
+            <div className="design-component" id={this.props.id}>
+                <div className="design--static" id={this.props.id}>
                     <h4 id="design-title">{this.props.info.title}</h4>
                     <img id="design-logo" src={this.state.logo} alt="" onClick={this.expandContent}/>
                 </div>          

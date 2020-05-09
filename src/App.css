@@ -11,24 +11,26 @@ p {
 
 .app {
   text-align: center;
-  background-color: #1c1d20;
+  background-color: #1c1d1d;
   color: white;
   align-content: center;
   justify-content: center;
-  overflow-x: hidden;
-  overflow-y: scroll;
   display: inline;
-  z-index: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 /* Header Content Styling */
 
 .main-header {
-  background-color: #1c1d20;
-  z-index: 5;
+  background-color: #1c1d1d;
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
+  top: 35px;
   height: 10%;
   padding-bottom: 5px;
 }
@@ -50,14 +52,14 @@ p {
 /* Main Content Styling (sidebar + main component) */
 
 .content {
-  padding-top: 3%;
+  margin-top: 70px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   max-width: 100%;
   max-height: 90%;
   align-content: center;
-  margin: auto;
   z-index: 1;
+  text-align: center;
 }
 
 #info {
@@ -66,15 +68,16 @@ p {
 
 #sidebar {
   grid-area: sidebar;
-  position: relative;
+  text-align: right;
   min-width: 10%;
-  max-width: 10%;
-  min-height: 95%;
+  min-height: 20%;
   display: flex;
-  flex-direction: column;
-  padding: 5px;
-  align-items: center;
+  flex-direction: row;
   z-index: 2;
+}
+
+.spacer {
+  flex: 1;
 }
 
 /* Scroll Layout Styling */
@@ -83,11 +86,12 @@ p {
   grid-area: main;
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;
   overflow-y: hidden;
-  margin-bottom: auto;
+  overflow: visible;
   align-content: center;
-  min-height: 75vh;
+  min-height: 550px;
+  max-height: 650px;
+  padding: 10px;
 }
 
 #scroll.design-component {
@@ -139,13 +143,12 @@ p {
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: repeat(3, 300px);
-  grid-auto-rows: 300px;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  grid-auto-rows: 370px;
+  justify-items: center;
   text-align: center;
-  align-content: center;
-  align-self: center;
-  align-items: center;
-  text-align: center;
+  margin: 0 auto;
+  /* margin-top: 20px; */
 }
 
 #grid.design-component {
@@ -154,9 +157,10 @@ p {
   display: flex;
   flex-direction: column;
   background-color: rgb(125, 125, 128, 0.08);
-  height: 280px;
-  width: 280px;
+  height: 350px;
+  width: 350px;
   vertical-align: center;
+  text-align: center;
 }
 
 #grid.design-component:hover {
@@ -170,6 +174,12 @@ p {
   flex-direction: column;
   overflow-y: none;
   z-index: 1;
+  margin: auto;
+}
+
+#grid.design--static #design-title {
+  margin-left: 0;
+  text-align: center;
 }
 
 #grid.design--expanded {
@@ -193,15 +203,24 @@ p {
 /* Sidebar components styling (layout buttons + info bubble) */
 
 #layout-button {
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   border-radius: 65px;
-  margin: 3px;
   background-color: rgb(125, 125, 128, 0.2);
   color: white;
   border: none;
-  position: sticky;
-  position: -webkit-sticky;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#layout-button img {
+  max-height: 30px;
+  margin: auto;
+}
+
+#sidebar button {
+  padding: 0;
+  margin-left: 25px;
 }
 
 #layout-button:hover {
@@ -259,4 +278,70 @@ p {
 #design-card {
   max-width: 400px;
   max-height: 400px;
+}
+
+/* Screen Responsiveness */
+
+@media only screen and (max-width: 500px) {
+
+  #scroll.main-component {
+    min-height: 73vh;
+    
+  }
+
+  #scroll.design-component {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #scroll.design--static {
+    width: 200px;
+    padding-left: 0px;
+  }
+
+  #scroll.design--expanded {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    position: inherit;
+    overflow-y: none;
+  }
+  
+  
+  /* Sidebar components styling (layout buttons + info bubble) */  
+
+  #sidebar {
+    display: none;
+  }
+  
+  #layout-button {
+    width: 35px;
+    height: 35px;
+    margin-left: 15px;
+  }
+
+  #layout-button #info-tooltip {
+    min-width: 200px;
+  }
+
+  /**/
+
+  #design-logo {
+    vertical-align: middle;
+    padding-bottom: auto auto;
+    max-width: 150px;
+    max-height: 200px;
+  }
+
+  #scroll #design-logo {
+    padding-top: 25%;
+  }
+
 }

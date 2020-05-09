@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import DesignComponent from './DesignComponent';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 class MainComponent extends Component 
 { 
     render() {
         return (
-            <div class="main-component" id={this.props.layout}>
-                {this.props.data.map((component) => {
-                    return <DesignComponent id={this.props.layout} info={component} key={component.id} expandable={true}/>
-                })}
-            </div>
+            <Scrollbars 
+                style={{ height: 780, marginTop: 40 }}
+                renderScrollbarHorizontal={props => <div {...props} className="scrollbar-vertical"/>}
+                autoHide
+            >
+                <div className="main-component" id={this.props.layout}>
+                    {this.props.data.map((component) => {
+                        return <DesignComponent id={this.props.layout} info={component} key={component.id} expandable={true}/>
+                    })}
+                </div>
+            </Scrollbars>
+            
         );
     }
 

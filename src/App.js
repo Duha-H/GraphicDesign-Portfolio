@@ -34,21 +34,22 @@ class App extends Component
 
 	render() {
 		return (
-			<div class="app">
-				<header class="main-header">
+			<div className="app">
+				<header className="main-header">
 					<h1 id="header-title">DUHA HASSAN</h1>
 					<h3 id="header-subtitle">BUSINESS CARD & LOGO DESIGNS</h3>
 				</header>
-				<div class="content">
+				<div className="content">
 					<div id="sidebar">
-						<div id="layout-button">
+						{/* <div id="layout-button">
 							<img src={require(`./assets/icons/info_icon_w.svg`)} alt="unavailable"/>
 							<span id="info-tooltip">
 								This is a collection of some business card and logo designs I've made.<br />
 								Click on a logo to expand or collapse a section.<br />
 								Hover over a business card to display the other side of the card.
 							</span>
-						</div>
+						</div> */}
+						<div className="spacer"></div>
 						<button id="layout-button" onClick={this.handleScrollLayout}>
 							<img src={require(`./assets/icons/scroll_icon_w.svg`)} alt="unavailable"/>
 						</button>
@@ -57,7 +58,7 @@ class App extends Component
 						</button>
 					</div>
 					<MainComponent data={this.state.data} layout={this.state.layout}/>
-					<div id="sidebar"></div>
+					{/* <div id="sidebar"></div> */}
 				</div>
 			</div>
 		);
